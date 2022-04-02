@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>
+            automation bulb
+        </title>
+    </head>
+
+    <body>
+        <center>
+            {% if led == 1 %}
+                <img src="../static/pic_bulbon.gif" alt="on">
+            {% else %}
+                <img src="../static/pic_bulboff.gif" alt="off">
+            {% endif %}
+
+            <br><br>
+            <form action="/bulb" method="post">
+                <input type="radio" name="led" id="onid" value="1">
+                <label for="onid">LED ON</label>
+
+                <input type="radio" name="led" id="offid" value="0">
+                <label for="offid">LED OFF</label>
+                <br><br>
+                <input type="submit">
+            </form>
+        </center>
+    </body>
+</html>

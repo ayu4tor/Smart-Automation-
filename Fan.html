@@ -1,0 +1,30 @@
+
+<html>
+    <head>
+        <title>
+            Fan
+        </title>
+    </head>
+
+    <body>
+        <center>
+            {% if Fan == 1 %}
+                <img src="../static/fan_on.gif" alt="on">
+            {% else %}
+                <img src="../static/fan_off.png" alt="off">
+            {% endif %}
+
+            <br><br>
+            <form action="/Fan" method="post">
+                <input type="radio" name="Fan" id="onid" value="1">
+                <label for="onid">FAN ON</label>
+
+
+                <input type="radio" name="Fan" id="offid" value="0">
+                <label for="offid">FAN OFF</label>
+                <br><br>
+                <input name="form" type="submit" value="PLAY"/>
+            </form>
+        </center>
+    </body>
+</html>
